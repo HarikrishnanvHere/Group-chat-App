@@ -1,0 +1,8 @@
+::1 - - [06/Sep/2024:12:58:22 +0000] "POST /user/signup HTTP/1.1" 200 45 "http://127.0.0.1:5501/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
+::1 - - [06/Sep/2024:12:59:43 +0000] "POST /user/signup HTTP/1.1" 403 49 "http://127.0.0.1:5501/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
+::1 - - [06/Sep/2024:13:00:48 +0000] "POST /user/signup HTTP/1.1" 200 45 "http://127.0.0.1:5501/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
+::1 - - [06/Sep/2024:13:01:04 +0000] "POST /user/signup HTTP/1.1" 403 49 "http://127.0.0.1:5501/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
+::1 - - [06/Sep/2024:13:09:30 +0000] "POST /user/login HTTP/1.1" 404 44 "http://127.0.0.1:5501/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
+::1 - - [06/Sep/2024:13:10:46 +0000] "POST /user/login HTTP/1.1" 200 465 "http://127.0.0.1:5501/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
+::1 - - [06/Sep/2024:13:24:07 +0000] "POST /user/signup HTTP/1.1" 200 45 "http://127.0.0.1:5501/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
+::1 - - [06/Sep/2024:13:24:26 +0000] "POST /user/login HTTP/1.1" 200 437 "http://127.0.0.1:5501/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"

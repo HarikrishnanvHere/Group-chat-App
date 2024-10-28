@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chat App</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../public/main.css">
+</head>
+<body>
+	<header>
+		<div class="group-name" id="group-name"></div>
+		<button id="addbtn" style="display: none;">Add User</button>
+		<button id="removebtn" style="display: none;">Remove User</button>
+		<button id="gobackbtn">
+			<svg height="16" width="16" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1024 1024"><path d="M874.690416 495.52477c0 11.2973-9.168824 20.466124-20.466124 20.466124l-604.773963 0 188.083679 188.083679c7.992021 7.992021 7.992021 20.947078 0 28.939099-4.001127 3.990894-9.240455 5.996574-14.46955 5.996574-5.239328 0-10.478655-1.995447-14.479783-5.996574l-223.00912-223.00912c-3.837398-3.837398-5.996574-9.046027-5.996574-14.46955 0-5.433756 2.159176-10.632151 5.996574-14.46955l223.019353-223.029586c7.992021-7.992021 20.957311-7.992021 28.949332 0 7.992021 8.002254 7.992021 20.957311 0 28.949332l-188.073446 188.073446 604.753497 0C865.521592 475.058646 874.690416 484.217237 874.690416 495.52477z"></path></svg>
+			<span>Go Back</span>
+		  </button>
+	</header>
+	<div id="adminSection">
+	<div class="section" id="addUser" style="display: none;">
+		<h3>Add user in group</h3>
+		<form onsubmit="addToGroup(event)">
+		  <div class="form-group">
+			<label for="userId">Enter User Id:</label>
+			<input type="text" name="userId" id="userId" required/>
+		  </div>
+		  <div class="form-group">
+			<label>Access Type:</label>
+			<label for="isAdmin">Admin</label>
+			<input type="radio" name="isAdmin" id="isAdmin" value="true" />
+			<label for="isAdmin">Normal User</label>
+			<input type="radio" name="isAdmin" id="isAdmin" value="false" checked />
+		  </div>
+		  <button id="adu" type="submit">Add User</button>
+		</form>
+	  </div>
+	  
+	  <div class="section" id="removeUser" style="display: none;">
+		<h3>Remove user from group</h3>
+		<form onsubmit="removeFromGroup(event)">
+		  <div class="form-group">
+			<label for="rmuser">Enter User Id:</label>
+			<input type="text" name="rmuser" id="rmuser" required/>
+		  </div>
+		  <button id="rmu">Remove User</button>
+		</form>
+	  </div>
+	</div>
+  
+	<div class="chat-container" id="chat-container">
+		<!-- <div class="chat-message other">
+			<p class="message-text">Hii</p>
+			<p class="message-time"></p>
+		</div>
+		<div class="chat-message me">
+			<p class="message-text">Hello</p>
+			<p class="message-time"></p>
+		</div> -->
+
+		<div id="chat-message">
+			
+		</div>
+
+		<form class="chat-form" id="chat-form" onsubmit="sendMessage(event)" enctype="multipart/form-data">
+			<input type="text" placeholder="Type your message here" id="message" required>
+			<input type="file" id="fileInput" accept="image/*, video/*" style="display: none;" onchange="sendMultimedia(event)">
+
+			<!-- <label for="fileInput" id="fileInputLabel">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+					<path d="M20.475 3.137h-2.625l-1.35-1.35c-.488-.488-1.344-.487-1.83.002l-1.2 1.199H8.53l-1.2-1.199c-.487-.489-1.344-.49-1.83-.002l-1.35 1.35H3.524c-.917 0-1.663.747-1.663 1.665v16.333c0 .917.746 1.664 1.663 1.664h16.95c.918 0 1.665-.747 1.665-1.664V4.802c0-.918-.747-1.665-1.665-1.665zm-8.315 14.33c-2.81 0-5.1-2.29-5.1-5.102 0-2.812 2.29-5.102 5.1-5.102 2.813 0 5.102 2.29 5.102 5.102 0 2.812-2.29 5.102-5.102 5.102zm6.398-8.937h-1.292c-.224 0-.425-.13-.521-.336l-.215-.546a1.18 1.18 0 0 0-.797-.706l-1.017-.406c-.06-.023-.124-.036-.185-.036h-1.913c-.064 0-.13.013-.19.038l-1.012.402a1.175 1.175 0 0 0-.797.702l-.217.551a.545.545 0 0 0-.516.337h-1.296a.842.842 0 0 0-.836.845v6.294a.842.842 0 0 0 .835.845h9.254a.842.842 0 0 0 .836-.845V9.565a.842.842 0 0 0-.836-.845z"/>
+				</svg>
+			</label> -->
+			
+			<button>Send</button>
+		</form>
+	</div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js" integrity="sha512-uMtXmF28A2Ab/JJO2t/vYhlaa/3ahUOgj1Zf27M5rOo8/+fcTUVH0/E0ll68njmjrLqOBjXM3V9NiPFL5ywWPQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+	<script src="http://localhost:3000/socket.io/socket.io.js"></script> 
+	<script src="chatapp.js"></script>
+</body>
+</html>
